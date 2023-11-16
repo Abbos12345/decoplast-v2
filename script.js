@@ -5,6 +5,9 @@ const languageSelector = document.getElementById('languageSelector');
 const headline = document.querySelector('.headline');
 const preLoader = document.querySelector('.pre-loader');
 const aboutUsText = document.getElementById('about-us__text');
+const sectionOneHeadline = document.getElementById('section1_h3');
+const sectionTwoHeadline = document.getElementById('section2_h3');
+const sectionThreeHeadline = document.getElementById('section3_h3');
 
 const tl = new TimelineMax();
 
@@ -29,6 +32,9 @@ function loadJSON(language) {
   function updateContent(data, language) {
     headline.textContent = data.headline;
     aboutUsText.textContent = data.aboutTxt;
+    sectionOneHeadline.textContent = data.section1;
+    sectionTwoHeadline.textContent = data.section2;
+    sectionThreeHeadline.textContent = data.section3;
 
     // const newPath = language === 'en' ? '/' : `/${language}`;
     // history.pushState(null, '', newPath);
